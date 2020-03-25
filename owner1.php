@@ -1,32 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire</title>
+    <title>accueil Mr Schylowski</title>
 </head>
+
 <body>
-    <form action="controller.php" method="POST">
+    <h1>VOS IDENTIFIANTS DE CONNEXION</h1>
+    <style>
+h1 {
+    color : white;
+    background: green;
+    text-indent: 25%;
+}
+    </style>
+    
+    <div>
+        <form class= "formulaire" method="get" action="controller.php">
         <fieldset>
-            <legend>Formulaire</legend>
-            <div>
-                <label for="nameinput">name</label>
-                <input type="text" name="name" id="nameinput">
+    <style>
+label
+{
+	display: block;
+	width: 55%;
+	float: left;
+}
+div {
+    width: 60%;
+    margin: auto;
+}
+    </style>
+            <legend>Vos Informations de connexion</legend>
+            <style>
+legend {
+    margin: auto;
+}
+            </style>
+            
+            <div class="name">
+                <label for="name" >Votre nom</label>
+                <input type="text" name="name" id="name" placeholder="nom">
             </div>
-            <div>
-                <label for="idinput">identification</label>
-                <input type="text" name="identification" id="idinput">
+
+            <br />
+
+            <div class="password">
+                <label for="password" >Votre mot de passe</label>
+                <input type="password" name="password" id="password" placeholder="mot de passe">
             </div>
-            <div>
-                <label for="passwordinput">password</label>
-                <input type="password" name="password" id="passwordinput">
+
+            <br />
+
+            <div class="identification">
+                <label for="identification" >Votre identifiant</label>
+                <input type="text" name="infostitre" id="identification" placeholder="identifiant">
             </div>
-            <div>
-                <label><input type="checkbox" name="cgu" required checked>J'accepte les conditions d'utilisations</label>
-            </div>
-            <input type="submit" value="Envoyer">
-            <input type="reset" value="Annuler">
+
+            <br /> <br /> <br />
+
+                <input class="bouton" type="submit"></input>
+            <style>
+input {
+    margin-left: 45%;
+}
+            </style>
         </fieldset>
-    </form>
+        </form>
+        </div>
+    
 </body>
 </html>
