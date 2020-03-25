@@ -33,6 +33,8 @@ Identification erronée -> controller redirige vers index-php avec un message d'
 
 Identification fonctionne -> controller redirige vers index.php avec un message de succès envoyé par GET et sauvegarde la manipulation dans un cookie : Identification correcte. Transaction validée.
 
+si les 4 ont validé la transaction dans $_COOKIE
+
 
 
 Les critères:
