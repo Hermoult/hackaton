@@ -90,3 +90,11 @@ body {
     </header>
 </body>
 </html>
+<?php
+    if (!empty($_COOKIE['name'])) {
+        $nom=$_COOKIE['name'];
+    }
+    if ($nom){    
+        echo 'Bonjour Mr/Mme ' . $nom .', vous etes identifié, en attente des autres connexions...';
+    }
+?>
