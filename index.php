@@ -97,6 +97,10 @@ body {
     if ($name){    
         echo 'Bonjour Mr/Mme ' . $nom .', vous etes identifié, en attente des autres connexions...';
     } else {
-        echo "Erreur d'identification, veuillez vérifier vos identifiants";
+        echo "Votre mot de passe et/ou votre identifiant sont erronées. ";
     }
+
+    /* if "IL Y A LES 4 COOKIES"{
+        header('Location: ./success.php');
+    } */
 ?>
