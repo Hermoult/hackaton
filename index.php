@@ -8,10 +8,10 @@
 <body>
     <header>
         <h1>Accueil</h1>
-        <a href="owner1.php.">1 Mr Schylowski</a>
-        <a href="owner2.php.">2 Mme Orlando</a>
-        <a href="owner3.php.">3 Mr Petrov </a>
-        <a href="owner4.php.">4 Mme Julien</a>
+        <a href="owner1.php">1 Mr Schylowski</a>
+        <a href="owner2.php">2 Mme Orlando</a>
+        <a href="owner3.php">3 Mr Petrov </a>
+        <a href="owner4.php">4 Mme Julien</a>
     </header>
 </body>
 </html>
