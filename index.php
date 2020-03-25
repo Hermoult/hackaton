@@ -100,7 +100,9 @@ body {
         echo "Votre mot de passe et/ou votre identifiant sont erronées. ";
     }
 
-    /* if "IL Y A LES 4 COOKIES"{
+    /* if "SI LA LONGUEUR DU TABLEAUCOOKIE = 4"{
         header('Location: ./success.php');
     } */
 ?>
+
+if (isset $_GET['name'])
