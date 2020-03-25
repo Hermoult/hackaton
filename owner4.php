@@ -1,74 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire BDD</title>
-
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="stylesheet" media="screen and max-width:1280px)" href="petite_resolution.css"/>
-
+    <title>accueil Mme Julien</title>
 </head>
 
 <body>
+    <h1>VOS IDENTIFIANTS DE CONNEXION</h1>
+    <style>
+h1 {
+    color : white;
+    background: green;
+    text-indent: 25%;
+}
+    </style>
+    
+    <div>
+        <form class= "formulaire" method="get" action="controller.php">
+        <fieldset>
+    <style>
+label
+{
+	display: block;
+	width: 55%;
+	float: left;
+}
+div {
+    width: 60%;
+    margin: auto;
+}
+    </style>
+            <legend>Vos Informations de connexion</legend>
+            <style>
+legend {
+    margin: auto;
+}
+            </style>
+            
+            <div class="name">
+                <label for="name" >Votre nom</label>
+                <input type="text" name="name" id="name" placeholder="nom">
+            </div>
 
-    <nav>
-        <ul>
-            <li> <a href="index.html">Accueil</a> </li>
-            <li> <a href="index.html">Contact</a> </li>
-        </ul>
-    </nav>
+            <br />
 
-    <h1>Formulaire</h1>
+            <div class="password">
+                <label for="password" >Votre mot de passe</label>
+                <input type="password" name="password" id="password" placeholder="mot de passe">
+            </div>
 
-    <form id="form" action=controller_insertion.php method="POST">
+            <br />
 
-        <br />
+            <div class="identification">
+                <label for="identification" >Votre identifiant</label>
+                <input type="text" name="infostitre" id="identification" placeholder="identifiant">
+            </div>
 
-        <div>
-            <label for="name">Votre nom</label>
-            <input type="text" id="name" name="name">
+            <br /> <br /> <br />
+
+                <input class="bouton" type="submit"></input>
+            <style>
+input {
+    margin-left: 45%;
+}
+            </style>
+        </fieldset>
+        </form>
         </div>
-
-        <br />
-        <br />
-
-
-        <div>
-            <label for="firstname">Votre prénom</label>
-            <input type="text" id="firstname" name="firstname">
-        </div>
-
-        <br />
-        <br />
-
-        <div>
-            <label for="password">Votre mot de passe</label>
-            <input type="text" id="password" name="password">
-        </div>
-
-        <br />
-        <br />
-
-        <div>
-            <label for="email">Votre email</label>
-            <input type="text" id="email" name="email">
-        </div>
-
-        <br />
-        <br />
-        
-        <div>
-            <input type="submit" value="Envoyer">
-        </div>
-
-
-
-    </form>
-
-
+    
 </body>
-
 </html>
-
