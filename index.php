@@ -74,7 +74,7 @@ ul.hbox
     height: 50pix;
 }
 body {
-    background-color: green;
+    background-color: white;
 }
 
 </style>
@@ -92,9 +92,15 @@ body {
 </html>
 <?php
     if (!empty($_COOKIE['name'])) {
-        $nom=$_COOKIE['name'];
+        $name=$_COOKIE['name'];
     }
-    if ($nom){    
+    if ($name){    
         echo 'Bonjour Mr/Mme ' . $nom .', vous etes identifié, en attente des autres connexions...';
+    } else {
+        echo "Votre mot de passe et/ou votre identifiant sont erronées. ";
     }
+
+    /* if "IL Y A LES 4 COOKIES"{
+        header('Location: ./success.php');
+    } */
 ?>
