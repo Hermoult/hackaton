@@ -29,6 +29,17 @@ Formulaires -> 3 champs: identifiant numérique (entier de 10 chiffres)
                          mot de passe (chaîne de caractères)
 
 
-Identification erronée -> controller redirige vers index-php avec un message d'erreur : Votre mot de passe et/ou votre identifiant sont erronées. 
+Identification erronée -> controller redirige vers index-php avec un message d'erreur envoyé par GET : Votre mot de passe et/ou votre identifiant sont erronées. 
 
-Identification fonctionne -> controller redirige vers index.php avec un message de succès et sauvegarde la manipulation dans un cookie : Identification correcte. Transaction validée.
+Identification fonctionne -> controller redirige vers index.php avec un message de succès envoyé par GET et sauvegarde la manipulation dans un cookie : Identification correcte. Transaction validée.
+
+
+
+Les critères:
+
+- respect de l’expression des besoins clients
+- indentation, commentaires du code
+- Participation de chaque membre à l’élaboration du projet (code)
+- Qualité des interfaces proposées (design et expérience utilisateur)
+- Fonctionnement global du projet
+
