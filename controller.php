@@ -11,6 +11,11 @@
         if(($val = read($name, $password, $identification)) == -1){
             header('Location: ./index.php');
         }
+        else {
+            header('location: ./index.php');
+        }
+
+
         // utilisation des cookies
 
         if (!empty($_GET['action']) && $_GET['action'] === 'deconnecter') {
