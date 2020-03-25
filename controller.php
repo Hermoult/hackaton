@@ -1,37 +1,29 @@
 <?php
-if (!(isset ($_POST['Envoyer']))){
+if (!(isset($_POST['Envoyer'])))
+{
+    // Recup des données du formulaire
+    $name=htmlspecialchars($_GET['name']);
+    $password=htmlspecialchars($_GET['password']);
+    $identification=htmlspecialchars($_GET['identification']);
 
-    $name=htmlspecialchars($_POST['name']);
-    $password=htmlspecialchars($_POST['password']);
-    $identification=htmlspecialchars($_POST['identification']);
-            //On récupère les valeurs entrées par l'utilisateur :
-    if(($val = read($name, $password, $identification)) == -1){
-        header('Location: ./index.php');
-    }
-    else {
-        header('Location: ./success.php');      
-    }
-}
-    function read($name, $password, $identification){
-        // on se connecte a la base
-        $DB_NAME = "hackaton1"; //database_name
-        $DB_DSN = "mysql:host=127.0.0.1:3308;dbname=".$DB_NAME; //database_datasourcename
-        $DB_USER = "root"; //database_user
-        $DB_PASSWORD = ""; //database_mot_de_passe
-        try {
-            $bdd = new PDO($DB_DSN, $DB_USER, $DB_PASSWORD);
-            $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // Configure un attribut PDO
-            $query= $bdd->prepare("SELECT name, identifiant_num , validation_key FROM user WHERE name=:name AND identifiant_num=:identifiant_num AND validation_key=:validation_key"); // verifie que les données rentrées sont bonnes par rapport à la bdd
-            $query->execute(array(':name' => $name, ':identifiant_num' => $identification, ':validation_key' => $password)); // Exécute une requête préparée
-            $val = $query->fetch(); // recupere les valeurs preparées
-            if($val == null){
-                $query->closeCursor();  // Ferme le curseur, permettant à query d'être de nouveau exécuté
-                return (-1);
-            }
-            $query->closeCursor();
-            // echo 'success !' , '<br>';
-            return ($val);
-        } catch (PDOException $e) {
+    // Connexion a la base via PDO
+    try {
+        $pdo = new PDO('mysql:host=127.0.0.1:3308;dbname=hackaton1', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+    } catch (\Throwable $th) {
+        die('error sql connection');
+    } 
+    
+    // Preparation, envoie de la commande sql et lecture du profil corespondant
+    $sql = "SELECT name, identifiant_num , validation_key FROM user WHERE name=:name AND identifiant_num=:identifiant_num AND validation_key=:validation_key";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(array(':name' => $name, ':identifiant_num' => $identification, ':validation_key' => $password)); 
+    $donnees = $stmt->fetch();
+    
+    // Réponse sur le navigateur
+    if($donnees==null) {
+            echo "Pas de profil correspondant";
+    }else {
+            echo '<br>'.'Le profil ayant pour pseudo \''. $donnees['pseudo'] . '\' a pour mot de passe \'' . $donnees['password'] . '\', voici sa description : \'' . $donnees['description'] .'\'<br>' ;
     }
 }
 ?>
