@@ -18,27 +18,25 @@
 
         // utilisation des cookies
 
-        if (!empty($_GET['action']) && $_GET['action'] === 'deconnecter') {
-            unset($_COOKIE['name']);
-            setcookie('name', '', time() -10);
-        }
+        // if (!empty($_GET['action']) && $_GET['action'] === 'deconnecter') {
+        //     unset($_COOKIE['name']);
+        //     setcookie('name', '', time() -10);
+        // }
+
         if (!empty($_COOKIE['name'])) {
             $name = $_COOKIE['name'];
         }
         if (!empty($_GET['name'])) {
             setcookie('name', $_GET['name']);
         }
-        if (!empty($_COOKIE['password'])) {
-            $password = $_COOKIE['password'];
+        if (!empty($_GET['name'])) {
+            setcookie($name, 'name1', $_GET['name']);
         }
-        if (!empty($_GET['password'])) {
-            setcookie('password', $_GET['password']);
+        if (!empty($_GET['name'])) {
+            array_push($name2, 'name2', $_GET['name']);
         }
-        if (!empty($_COOKIE['identification'])) {
-            $identification = $_COOKIE['identification'];
-        }
-        if (!empty($_GET['identification'])) {
-            setcookie('identification', $_GET['identification']);
+        if (!empty($_GET['name'])) {
+            array_push($name3, 'name3', $_GET['name']);
         }
 }
 
