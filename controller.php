@@ -5,11 +5,6 @@ if (!(isset ($_GET['Envoyer']))){
     $motdepasse=htmlspecialchars($_GET['mot_de_passe']);
     $identification=htmlspecialchars($_GET['identification']);
             //On récupère les valeurs entrées par l'utilisateur :
-            // $motdepasse=htmlspecialchars($_POST['mot_de_passe']);
-            // $description=htmlspecialchars($_POST['description']);
-            //On construit la date d'aujourd'hui
-            //strictement comme sql la construit
-            //$today = date("y-m-d");
     if(($val = read($pseudo, $motdepasse, $identification)) == -1){
         echo "User not found";
         echo "password incorrect";
