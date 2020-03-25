@@ -7,7 +7,7 @@
 </head>
 <body>
     <header>
-        <h1>Mon CRUD</h1>
+        <h1>Accueil</h1>
         <a href="owner1.php.">1 Mr Schylowski</a>
         <a href="owner2.php.">2 Mme Orlando</a>
         <a href="owner3.php.">3 Mr Petrov </a>
