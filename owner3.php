@@ -31,7 +31,7 @@ div {
     margin: auto;
 }
     </style>
-            <legend>Vos Information de connexion</legend>
+            <legend>Vos Informations de connexion</legend>
             <style>
 legend {
     margin: auto;
@@ -56,8 +56,15 @@ legend {
                 <label for="identification" >Votre identifiant</label>
                 <input type="text" name="infostitre" id="identification" placeholder="identifiant">
             </div>
+
             <br /> <br /> <br />
-            <input class="bouton" type="submit"></input>
+
+                <input class="bouton" type="submit"></input>
+            <style>
+input {
+    margin-left: 45%;
+}
+            </style>
         </fieldset>
         </form>
         </div>
