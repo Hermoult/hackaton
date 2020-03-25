@@ -23,8 +23,12 @@ h1 {
 label
 {
 	display: block;
-	width: 30%;
+	width: 55%;
 	float: left;
+}
+div {
+    width: 60%;
+    margin: auto;
 }
     </style>
             <legend>Vos Information de connexion</legend>
@@ -35,21 +39,21 @@ legend {
             </style>
             
             <div class="name">
-                <label for="name" >votre nom</label>
+                <label for="name" >Votre nom</label>
                 <input type="text" name="name" id="name" placeholder="nom">
             </div>
 
             <br />
 
             <div class="password">
-                <label for="password" >votre mot de passe</label>
+                <label for="password" >Votre mot de passe</label>
                 <input type="password" name="password" id="password" placeholder="mot de passe">
             </div>
 
             <br />
 
             <div class="identification">
-                <label for="identification" >votre identifiant</label>
+                <label for="identification" >Votre identifiant</label>
                 <input type="text" name="infostitre" id="identification" placeholder="identifiant">
             </div>
             <br /> <br /> <br />
