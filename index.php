@@ -3,94 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>accueil</title>
 </head>
 <body>
-    <header class="vbox">
-<style>
-header {
-    background-color: green;
-    color: white;
-    text-align: center;
-}
-.vbox 
-{
-    display: flex;
-    flex-flow: column nowrap;
-}
-
-.vbox > * 
-{
-    margin-bottom: 5%;
-}
-
-.vbox > *:last-child 
-{
-    margin-bottom: 0;
-}
-
-.hbox 
-{
-    display: flex;
-    flex-flow: row wrap;
-}
-
-.hbox > * 
-{
-    margin-right: 5%;
-}
-
-.hbox > *:last-child 
-{
-    margin-right: 0;
-}
-
-.hbox > .fluid,
-
-.vbox > .fluid 
-{
-    flex-grow: 1;
-}
-
-header.vbox 
-{
-    min-height: 100%;
-}
-
-header.vbox nav 
-{
-    margin: 0;
-}
-
-ul.hbox 
-{
-    background: white;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    justify-content: center;
-    align-items: center;
-    width: 100pix;
-    height: 50pix;
-}
-body {
-    background-color: white;
-}
-
-</style>
-        <h1>Accueil</h1>
-        <nav>
-            <ul class="hbox">
-                <li class="fluid"><a href="owner1.php">1 Mr Schylowski</a></li>
-                <li class="fluid"><a href="owner2.php">2 Mme Orlando</a></li>
-                <li class="fluid"><a href="owner3.php">3 Mr Petrov </a></li>
-                <li class="fluid"><a href="owner4.php">4 Mme Julien</a></li>
-            </ul>
+    <header class="topbar">
+        <h1 id="co">CONNEXION SECURISEE</h1>
+        <nav class ="liens">
+                <a href="owner1.php" title="Mr Schylowski">Mr Schylowski</a></li>
+                <a href="owner2.php" title="Mme Orlando">Mme Orlando</a></li>
+                <a href="owner3.php" title="3 Mr Petrov">Mr Petrov </a></li>
+                <a href="owner4.php" title="Mme Julien">Mme Julien</a></li>
         </nav>
     </header>
 </body>
 </html>
-<?php
+<!-- <?php
     if (!empty($_COOKIE['name'])) {
         $name=$_COOKIE['name'];
     }
@@ -99,10 +27,4 @@ body {
     } else {
         echo "Votre mot de passe et/ou votre identifiant sont erronées. ";
     }
-
-    /* if "SI LA LONGUEUR DU TABLEAUCOOKIE = 4"{
-        header('Location: ./success.php');
-    } */
-?>
-
-if (isset $_GET['name'])
+?> -->

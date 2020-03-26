@@ -1,13 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>accueil Mme Julien</title>
+    <title>accueil Mr Schylowski</title>
 </head>
 
 <body>
-    <h1>VOS IDENTIFIANTS DE CONNEXION</h1>
+    <h1>Bonjour monsieur Schylowski </h1>
     <style>
 h1 {
     color : white;
