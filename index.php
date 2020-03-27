@@ -18,13 +18,18 @@
     </header>
 </body>
 </html>
-<!-- <?php
-    if (!empty($_COOKIE['name'])) {
-        $name=$_COOKIE['name'];
-    }
-    if ($name){    
-        echo 'Bonjour Mr/Mme ' . $nom .', vous etes identifié, en attente des autres connexions...';
-    } else {
-        echo "Votre mot de passe et/ou votre identifiant sont erronées. ";
-    }
-?> -->
+<?php
+// if(isset($GET['Envoyer']))
+
+//     $name=$_COOKIE['name'];
+//     if ($name){    
+//         echo 'Bonjour Mr/Mme ' . $nom .', vous etes identifié, en attente des autres connexions...';
+//     } else {
+//         echo "Votre mot de passe et/ou votre identifiant sont erronées. ";
+//     }
+//     /* if(count($tab) ==4) */
+//     // if (isset($_COOKIE['1','2','3','4']))
+//     {
+//         header('location : success.php');
+//     }
+?>  

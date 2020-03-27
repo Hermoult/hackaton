@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <h1 id="vosid">Bonjour monsieur Dchylowsky</h1>
+    <h1 id="vosid">Bonjour monsieur Schylowsky</h1>
     <div>
         <form class= "formulaire" method="get" action="controller.php">
         <fieldset id="form">
